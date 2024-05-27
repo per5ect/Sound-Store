@@ -1,0 +1,12 @@
+uživatelská a administrátorská příručka
+
+ADMIN{
+      Heslo: admin 
+      Email: admin@mail.com
+      }
+
+uživatel{
+        Můžete si vytvořit vlastní účet.
+        }
+        
+        
