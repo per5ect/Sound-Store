@@ -1,0 +1,46 @@
+
+<div *ngIf="!isCustommerLoggedIn && !isAdminLoggedIn" class="navbar-no-login">
+<mat-toolbar  class="navbar default-navbar">
+    <button routerLink="/customer/dashboard" routerLinkActive="active" mat-button><img src="/assets/img/logo-text.png" alt=""></button>
+    <span class="spacer"></span>
+    <div class="default-links">
+      <a routerLink="/customer/dashboard" routerLinkActive="active" class="default-navbar-link">Shop page</a>
+      <a routerLink="/signup" routerLinkActive="active" class="default-navbar-link">Sign Up</a>
+      <a routerLink="/login" routerLinkActive="active" class="default-navbar-link">Log In</a>
+    </div>
+    
+  </mat-toolbar>
+
+
+
+</div>
+
+<div *ngIf="isAdminLoggedIn">
+  <mat-toolbar color="primary" class="navbar admin-navbar">
+    <button mat-button routerLink="/customer/dashboard" routerLinkActive="active"><img src="/assets/img/logo-text.png" alt=""></button>
+      <span class="spacer">Admin Panel</span>
+      <a mat-button routerLink="/admin/dashboard" routerLinkActive="active" class="default-navbar-link">All Products</a>
+      <a mat-button routerLink="/admin/category" routerLinkActive="active" class="default-navbar-link">Add Category</a>
+      <a mat-button routerLink="/admin/product" routerLinkActive="active" class="default-navbar-link">Add Product</a>
+      <a mat-button routerLink="/admin/orders" routerLinkActive="active" class="default-navbar-link">View Orders</a>
+      <a mat-button  routerLinkActive="active" (click)="logout()" class="default-navbar-link">Log out</a>
+    </mat-toolbar>
+    
+  </div>
+  
+
+  <div *ngIf="isCustommerLoggedIn">
+    <mat-toolbar color="primary" class="navbar customer-navbar">
+      <button mat-button routerLink="/customer/dashboard" routerLinkActive="active"><img src="/assets/img/logo-text.png" alt=""></button>
+        <span class="spacer"></span>
+      <a mat-button routerLink="/customer/dashboard" routerLinkActive="active" class="default-navbar-link">Dashboard</a>
+      <a mat-button routerLink="/customer/cart" routerLinkActive="active" class="default-navbar-link">Cart</a>
+      <a mat-button routerLink="/customer/my_orders" routerLinkActive="active" class="default-navbar-link">My orders</a>
+      <a mat-button routerLink="/customer/profile" routerLinkActive="active" class="default-navbar-link">Profile</a>
+      <a mat-button  routerLinkActive="active" (click)="logout()" class="default-navbar-link">Log out</a>
+      </mat-toolbar>
+      
+    </div>
+
+    
+  <router-outlet></router-outlet>

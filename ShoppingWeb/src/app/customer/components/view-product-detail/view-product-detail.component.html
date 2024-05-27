@@ -1,0 +1,26 @@
+<div class="center-container" *ngIf="product">
+    <div class="product-card">
+        <div class="product-image">
+            <img [src]="product.processedImg" alt="{{ product.name }} Image">
+        </div>
+        <div class="product-details">
+            <div class="pading-div">
+            <div class="name-price-catg">
+        <div class="name-price">
+            <h2>{{ product.name }}</h2>
+            <p class="price">{{ product.price }} <span>$</span> </p>
+        </div>
+
+            <p class="category">Category: {{ product.categoryName }}</p>
+        </div>
+
+            <p class="description">{{ product.description }}</p>
+        </div>
+
+        <div class="product-buttons">
+            <button class="ad-to-cart">Add to cart</button>
+        </div>
+        </div>
+    </div>
+    
+</div>
