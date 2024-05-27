@@ -1,8 +1,10 @@
 uživatelská a administrátorská příručka
 
 ADMIN{
+      V backendu kód pro automatické vytvoření účtu pro administrátora 
       Heslo: admin 
       Email: admin@mail.com
+
       }
 
 uživatel{
